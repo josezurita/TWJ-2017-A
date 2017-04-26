@@ -53,5 +53,5 @@ Este comando **elimina** los o el  contenedor que esten **detenido**.
 Para utilizar docker con mysql vamos a utilizar el siguiente comando:
 
 ```
->> docker run --name mySQL -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=twjs -e MYSQL_USER=root -e MYSQL_PASSWORD=root -p 3306:3306 -d mysql
+>> docker run --name mySQL -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=twjs -e MYSQL_USER=jose -e MYSQL_PASSWORD=jose -p 3306:3306 -d mysql
 ```
