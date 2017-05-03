@@ -60,4 +60,45 @@ var jose = {
 console.log(jose + 'asda');
 console.log(jose, 'asda');
 console.log('Altura', jose.altura);
-jose.altura
+delete jose.altura;
+
+jose.juegos = 'varios';
+
+var arreglo = [
+    1,
+    'jose',
+    2.4,
+    false,
+    null,
+    undefined,
+    new Date(),
+    -3421,
+    {
+        a: 'b'
+    }
+];
+
+console.log(arreglo[4]);
+
+var nuevoObjeto = {
+    papas: ['chaucha', 'criolla', 'francisco'],
+    cebollas: ['blanca', 'paiteña', 'perla']
+}
+console.log(nuevoObjeto.papas[2]);
+
+var matriz = [[0,1],[2,3]];
+console.log(matriz[0][0]);
+
+var arregloDeObjetos = [
+    {
+        id:1,
+        nombre:'Adrian'
+    },
+    {
+        id:2,
+        nombre:'Felipe'
+    }
+];
+console.log(arregloDeObjetos);
+arregloDeObjetos.splice(0,1);
+console.log(arregloDeObjetos);
