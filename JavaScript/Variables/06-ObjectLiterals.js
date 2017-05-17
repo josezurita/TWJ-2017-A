@@ -26,6 +26,7 @@ function definirObjetoUsuarioObjectLiterals(nombre){
     }
 }
 
+
 var nuevaFuncion = (nombre, apellido) => {
     var usuario = {
         nombre:nombre,
@@ -40,6 +41,6 @@ var nuevaFuncion = (nombre, apellido) => {
     console.log(usuario.nombre);
     console.log(usuario.apellido);
     console.log(usuario2.nombre);
-}
+};
 
 nuevaFuncion("Nombre","Apellido");
