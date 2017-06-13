@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-rotation',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RotationComponent implements OnInit {
 
+  @Input() rotation:string;
   constructor() { }
 
   ngOnInit() {

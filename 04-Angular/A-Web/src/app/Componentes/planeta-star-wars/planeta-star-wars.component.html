@@ -3,7 +3,18 @@
   <p>Horas en el dia:
     <strong>{{planeta.rotation_period}}</strong>h
   </p>
-  
+  <app-orbital
+    [orbital]="planeta.orbital_period">
+  </app-orbital>
+  <app-rotation
+    [rotation]="planeta.rotation_period">
+  </app-rotation>
+  <app-gravity
+    [gravity]="planeta.gravity">
+  </app-gravity>
+  <app-terrain
+    [terrain]="planeta.terrain">
+  </app-terrain>
   <!--
 
   <app-diameter-p-sw [planeta.diameter]="diameter">
@@ -11,6 +22,5 @@
   </app-diameter-p-sw>
 
   -->
-
   <p>Descripcion del planeta</p>
 </div>

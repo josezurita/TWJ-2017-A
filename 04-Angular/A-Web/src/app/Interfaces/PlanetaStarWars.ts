@@ -6,5 +6,7 @@ export interface PlanetaStarWarsInterface{
   rotation_period:string,
   orbital_period:string,
   residents?:string[],
-  imagenURL?:string
+  imagenURL?:string,
+  gravity:string,
+  terrain:string
 }
