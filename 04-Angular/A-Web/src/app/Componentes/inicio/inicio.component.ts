@@ -34,24 +34,18 @@ export class InicioComponent implements OnInit {
   }
 
   eliminarUsuario(usuario:UsuarioClass,indice:number) {
-
-    console.log("Indice:", this.usuarios.indexOf(usuario));
-
-    console.log("Indice con id: ", this.usuarios.indexOf(usuario).valueOf() + 7);
-    console.log("Inidce desde arriba", usuario.id);
     this._http
       .delete("http://localhost:1337/usuario?id=" + usuario.id, indice)
       .subscribe(
         respuesta => {
-          console.log("Se borra el usuario :" + usuario);
+          console.log("Usuario eliminado:" + usuario);
           this.usuarios.splice(indice, 1);
         },
-        error2 => {
-          console.log("No se pudo borrar el usuario");
+        error => {
+          console.log("Error: " + error);
         }
       )
   }
-
   // planetas2 : Array<PlanetaStarWars> =  []
 
 
