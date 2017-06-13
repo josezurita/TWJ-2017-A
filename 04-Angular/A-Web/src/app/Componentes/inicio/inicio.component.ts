@@ -26,10 +26,30 @@ export class InicioComponent implements OnInit {
         respuesta => {
           let respuestaJson = respuesta.json();
           console.log(respuestaJson);
+          this.usuarios.push(respuestaJson);
         },
     error => {
       console.log(error);
     })
+  }
+
+  eliminarUsuario(usuario:UsuarioClass,indice:number) {
+
+    console.log("Indice:", this.usuarios.indexOf(usuario));
+
+    console.log("Indice con id: ", this.usuarios.indexOf(usuario).valueOf() + 7);
+    console.log("Inidce desde arriba", usuario.id);
+    this._http
+      .delete("http://localhost:1337/usuario?id=" + usuario.id, indice)
+      .subscribe(
+        respuesta => {
+          console.log("Se borra el usuario :" + usuario);
+          this.usuarios.splice(indice, 1);
+        },
+        error2 => {
+          console.log("No se pudo borrar el usuario");
+        }
+      )
   }
 
   // planetas2 : Array<PlanetaStarWars> =  []
