@@ -1,3 +1,12 @@
-<p>
-  movie works!
-</p>
+<div class="col-sm-6" style="padding-top: 25px;">
+  <div class="card" style="width: 20rem;" >
+    <img class="card-img-top" src="{{movie.poster}}" alt="{{movie.poster}}">
+    <div class="card-block">
+      <h4 class="card-title">{{movie.show_title}}</h4>
+      <p class="card-text"><strong>Calificación: </strong>{{movie.rating}}</p>
+      <p class="card-text"><strong>Director: </strong>{{movie.director}}</p>
+      <p class="card-text">{{movie.summary}}</p>
+      <a href="#" class="btn btn-primary">Más información</a>
+    </div>
+  </div>
+</div>
