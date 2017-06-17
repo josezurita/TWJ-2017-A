@@ -8,16 +8,17 @@ import {Http} from "@angular/http";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
+  title = 'app works!';
   movieList: MovieInterface[];
 
   constructor(private _http:Http) { }
 
   ngOnInit() {
+    console.log("entra a on init");
     this._http.get("http://netflixroulette.net/api/api.php?director=Quentin%20Tarantino").subscribe(respuesta=>{
       let rJson = respuesta.json();
       console.log("respuesta json:", rJson);
       this.movieList=rJson;
-
     }, error=>{
       console.log("error: ", error);
     });
