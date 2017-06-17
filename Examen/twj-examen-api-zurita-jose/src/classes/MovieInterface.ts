@@ -5,7 +5,7 @@ export interface MovieInterface {
   unit?: number,
   show_id?: number,
   show_title?: string,
-  release_year?: number,
+  release_year?: string,
   rating?: string,
   category?: string,
   show_cast?: string,
