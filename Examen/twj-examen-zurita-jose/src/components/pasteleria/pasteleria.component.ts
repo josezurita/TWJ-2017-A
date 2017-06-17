@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {PasteleriaInterface} from "../../classes/PasteleriaInterface";
 
 @Component({
   selector: 'app-pasteleria',
@@ -7,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PasteleriaComponent implements OnInit {
 
+  @Input() pasteleria: PasteleriaInterface;
   constructor() { }
 
   ngOnInit() {
