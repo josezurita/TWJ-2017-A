@@ -2,13 +2,10 @@
  * Created by jose.zurita on 16/6/17.
  */
 export interface PasteleriaClass {
-
-  constructor(
-    public id?: number,
-    public nombre?: string,
-    public ciudad?: string,
-    public correo?: string,
-    public createdAt?: Date,
-    public updatedAt?: Date){
-  }
+    id?: number,
+    nombre?: string,
+    ciudad?: string,
+    correo?: string,
+    createdAt?: Date,
+    updatedAt?: Date
 }
