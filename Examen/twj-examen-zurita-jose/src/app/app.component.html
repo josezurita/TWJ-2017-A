@@ -1,24 +1,22 @@
+<link rel="stylesheet" href="../assets/Bootstrap/css/bootstrap.css">
 <h1>Ingreso de pastelerías</h1>
 <br>
 <div class="container">
-  <form>
+  <form data-toggle="validator" role="form">
     <div class="form-group row">
       <label class="col-sm-2 col-form-label">Nombre</label>
-      <div class="col-sm-10">
-        <input class="form-control" name="nombre" placeholder="Nombre dela pastelería" [(ngModel)]="nuevaPasteleria.nombre" required>
-      </div>
+      <input class="form-control" name="nombre" placeholder="Nombre dela pastelería" [(ngModel)]="nuevaPasteleria.nombre" required>
+      <div class="help-block with-errors"></div>
     </div>
     <div class="form-group row">
       <label class="col-sm-2 col-form-label">Ciudad</label>
-      <div class="col-sm-10">
-        <input type="text" name="ciudad" class="form-control" placeholder="Ciudad" [(ngModel)]="nuevaPasteleria.ciudad" required>
-      </div>
+      <input type="text" name="ciudad" class="form-control" placeholder="Ciudad" [(ngModel)]="nuevaPasteleria.ciudad" required>
+      <div class="help-block with-errors"></div>
     </div>
     <div class="form-group row">
       <label class="col-sm-2 col-form-label">Correo electrónico</label>
-      <div class="col-sm-10">
-        <input type="email" name="correo" class="form-control" placeholder="Correo electrónico" [(ngModel)]="nuevaPasteleria.correo" required>
-      </div>
+      <input type="email" name="correo" class="form-control" placeholder="Correo electrónico" [(ngModel)]="nuevaPasteleria.correo" required>
+      <div class="help-block with-errors"></div>
     </div>
     <div class="form-group row">
       <div class="offset-sm-2 col-sm-10">
@@ -26,4 +24,19 @@
       </div>
     </div>
   </form>
+</div>
+
+<div class="container">
+  <div class="col-sm-2"></div>
+  <div class="col-md-6"><h4>
+    Pastelerías
+  </h4></div>
+</div>
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-lg-8">
+    <div class="card-deck" >
+      <app-pasteleria *ngFor="let pasteleria of pasteleriaList" [pasteleria]="pasteleria"></app-pasteleria>
+    </div>
+  </div>
 </div>
