@@ -18,6 +18,22 @@ export class AppComponent implements OnInit{
 
   constructor(private _http:Http) { }
 
+  crearPasteleria(){
+
+    let pasteleria:PasteleriaInterface={
+      nombre: this.nuevaPasteleria.nombre,
+      ciudad: this.nuevaPasteleria.ciudad,
+      correo: this.nuevaPasteleria.correo};
+
+    this._http.post("http://localhost:1337/pasteleria", pasteleria).subscribe(respuesta=>{
+      let respuestaJson = respuesta.json();
+      console.log("respuesta json:", respuestaJson);
+      this.pasteleriaList.push(respuestaJson);
+    }, error=>{
+      console.log("error: ", error);
+    });
+  }
+
   ngOnInit() {
     this._http.get("http://localhost:1337/pasteleria").subscribe(respuesta=>{
       let rJson = respuesta.json();
