@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
-import { PasteleriaComponent } from './pasteleria/pasteleria.component';
+import { PasteleriaComponent } from '../components/pasteleria/pasteleria.component';
 
 @NgModule({
   declarations: [
