@@ -1,7 +1,7 @@
 /**
  * Created by jose.zurita on 16/6/17.
  */
-export interface PasteleriaInterface {
+export interface PasteleriaClass {
 
   constructor(
     public id?: number,
