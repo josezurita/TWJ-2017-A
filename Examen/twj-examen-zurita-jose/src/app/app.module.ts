@@ -5,13 +5,11 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { PasteleriaComponent } from '../components/pasteleria/pasteleria.component';
-import { InicioComponent } from '../components/inicio/inicio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PasteleriaComponent,
-    InicioComponent
+    PasteleriaComponent
   ],
   imports: [
     BrowserModule,
