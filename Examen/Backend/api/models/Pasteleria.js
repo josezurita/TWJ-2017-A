@@ -6,7 +6,17 @@
  */
 
 module.exports = {
-  attributes: {
+  connection: 'localDiskDb',
 
+  attributes: {
+    nombre:{
+      type:'string'
+    },
+    ciudad:{
+      type:'string'
+    },
+    correo:{
+      type:'string'
+    }
   }
 };
