@@ -27,6 +27,7 @@ export class InicioComponent implements OnInit {
           let respuestaJson = respuesta.json();
           console.log(respuestaJson);
           this.usuarios.push(respuestaJson);
+          this.nuevoUsuario = new UsuarioClass();
         },
     error => {
       console.log(error);
@@ -47,6 +48,24 @@ export class InicioComponent implements OnInit {
       )
   }
   // planetas2 : Array<PlanetaStarWars> =  []
+
+  actualizarUsuario(usuario:UsuarioClass){
+    let actualizacion = {
+      nombre:usuario.nombre
+    };
+    this._http.put("http://localhost:1337/usuario/"+usuario.id, actualizacion)
+      .map(res =>{
+      return res.json();
+    })
+      .subscribe(
+        res => {
+          console.log("Usuario actualizado:" + res);
+        },
+        err => {
+          console.log("Error: " + err);
+        }
+    )
+  }
 
 
 
@@ -85,7 +104,13 @@ export class InicioComponent implements OnInit {
       .subscribe(
       respuesta => {
         let respuestaJson:UsuarioClass[] = respuesta.json();
-        this.usuarios=respuestaJson;
+        this.usuarios = respuestaJson.map(
+          (usuario:UsuarioClass)=>{
+            //cambiar el usuario
+            usuario.editar = false;
+            return usuario;
+          }
+          );
         console.log(this.usuarios);
       },
       error => {
@@ -136,18 +161,12 @@ export class InicioComponent implements OnInit {
               planeta.imagenURL = "/assets/Imagenes/"+planeta.name+'.jpg';
 
               return planeta;
-
-
             }
           );
-
           //Arreglo que tengo
           // MUTARLE
           // MISMO ARREGLO CON UN NUEVO ATRIBUTO
           // IMAGEN
-
-
-
         },
         (error)=>{
           console.log("Error:",error);
