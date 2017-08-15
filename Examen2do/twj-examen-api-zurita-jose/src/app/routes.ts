@@ -9,7 +9,6 @@ import {ModuleWithProviders} from "@angular/core";
 
 //variable constante de tipo route
 export const routes:Routes = [
-
   {
     path:"todos",
     component:TodosComponent
