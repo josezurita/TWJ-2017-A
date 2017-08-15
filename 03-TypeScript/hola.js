@@ -37,9 +37,31 @@ var Persona = (function () {
     }
     Persona.prototype.imprimirPersona = function () {
         console.log(this.nombre, this.apellido);
+        this.imprimirNombre(this.nombre);
+        return {
+            nombre: this.nombre,
+            apellido: this.apellido
+        };
+    };
+    Persona.prototype.imprimirNombre = function (nombre, apellido) {
+        if (apellido) {
+            console.log(nombre, apellido);
+        }
+        else {
+            console.log(nombre);
+        }
     };
     return Persona;
 }());
+function SumarNumeros(numero1, numero2) {
+    return numero1 + numero2;
+}
+var objeto = {
+    nombre: "adrian",
+    imprimirNombre: function () {
+        return this.nombre;
+    }
+};
 var adrian = new Persona();
 console.log(adrian.nombre, adrian.apellido, adrian.fechaNacieminto);
 adrian.nombre = "Adrian";

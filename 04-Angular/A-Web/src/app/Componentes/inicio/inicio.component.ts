@@ -3,6 +3,7 @@ import {Http} from "@angular/http";
 import 'rxjs/add/operator/map';
 import {PlanetaStarWarsInterface} from "../../Interfaces/PlanetaStarWars";
 import {UsuarioClass} from "../../clases/UsuarioClass";
+import {Form} from "@angular/forms";
 
 @Component({
   selector: 'app-inicio',
@@ -17,8 +18,10 @@ export class InicioComponent implements OnInit {
 
   planetas : PlanetaStarWarsInterface[] = [];
 
-  crearUsuario() {
+  crearUsuario(UsuarioFormulario){
     console.log("Entró a crear usuario");
+    console.log(UsuarioFormulario);
+    console.log(this.nuevoUsuario);
 
     this._http
       .post("http://localhost:1337/Usuario", this.nuevoUsuario)
