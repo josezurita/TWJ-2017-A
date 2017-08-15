@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {Http} from "@angular/http";
 import {MovieInterface} from "../../classes/MovieInterface";
 
 @Component({
@@ -9,7 +10,7 @@ import {MovieInterface} from "../../classes/MovieInterface";
 export class MovieComponent implements OnInit {
 
   @Input() movie: MovieInterface;
-  constructor() { }
+  constructor(private _http:Http) { }
 
   ngOnInit() {
   }
@@ -17,19 +18,16 @@ export class MovieComponent implements OnInit {
   guardarPelicula(movie){
     console.log("Entró a crear usuario");
     console.log(movie);
-
-    /*this._http
-      .post("http://localhost:1337/Usuario", this.nuevoUsuario)
+    this._http
+      .post("https://javascript2017a.mybluemix.net/pelicula", this.movie)
       .subscribe(
         respuesta => {
           let respuestaJson = respuesta.json();
           console.log(respuestaJson);
-          this.usuarios.push(respuestaJson);
-          this.nuevoUsuario = new UsuarioClass();
         },
         error => {
           console.log(error);
-        })*/
+        })
   }
 
 }

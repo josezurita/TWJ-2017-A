@@ -6,13 +6,15 @@ import { MovieComponent } from './movie/movie.component';
 import {HttpModule} from "@angular/http";
 import { InicioComponent } from './inicio/inicio.component';
 import { CarruselComponent } from './carrusel/carrusel.component';
+import { ListaComponent } from './lista/lista.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MovieComponent,
     InicioComponent,
-    CarruselComponent
+    CarruselComponent,
+    ListaComponent
   ],
   imports: [
     BrowserModule,
