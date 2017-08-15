@@ -7,6 +7,7 @@ import {HttpModule} from "@angular/http";
 import { InicioComponent } from './inicio/inicio.component';
 import { CarruselComponent } from './carrusel/carrusel.component';
 import { ListaComponent } from './lista/lista.component';
+import { TodosComponent } from './todos/todos.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ListaComponent } from './lista/lista.component';
     MovieComponent,
     InicioComponent,
     CarruselComponent,
-    ListaComponent
+    ListaComponent,
+    TodosComponent
   ],
   imports: [
     BrowserModule,
