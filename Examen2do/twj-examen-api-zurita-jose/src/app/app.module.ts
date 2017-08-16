@@ -9,6 +9,7 @@ import { CarruselComponent } from './carrusel/carrusel.component';
 import { ListaComponent } from './lista/lista.component';
 import { TodosComponent } from './todos/todos.component';
 import { ModuloDeRutas } from './routes';
+import { StoredMovieComponent } from './stored-movie/stored-movie.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ModuloDeRutas } from './routes';
     InicioComponent,
     CarruselComponent,
     ListaComponent,
-    TodosComponent
+    TodosComponent,
+    StoredMovieComponent
   ],
   imports: [
     BrowserModule,
