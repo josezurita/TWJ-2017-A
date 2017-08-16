@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {Http, RequestOptions} from "@angular/http";
-import {MovieInterface} from "../../classes/MovieInterface";
+import { Http, RequestOptions } from "@angular/http";
+import { MovieInterface } from "../../classes/MovieInterface";
 
 @Component({
   selector: 'app-stored-movie',
@@ -27,7 +27,8 @@ export class StoredMovieComponent implements OnInit {
         respuesta => {
           let respuestaJson = respuesta.json();
           console.log(respuestaJson);
-
+          //this.usuarioborrado.emit(usuario);
+          //this.usuarios.splice(this.usuarios.indexOf(usuario), 1)
         },
         error => {
           console.log(error);
